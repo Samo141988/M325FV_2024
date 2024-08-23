@@ -46,8 +46,8 @@ jobs:
 
     - name: Pack AnyKernel3 ZIP
       run: |
-        cp -f arch/arm64/boot/Image.gz ./AnyKernel3/
-        cp -f drivers/*/*.ko ./AnyKernel3/modules/system/vendor/lib/modules/
+        cp -f M325FV/out/arch/arm64/boot/Image.gz ./AnyKernel3/
+        cp -f M325FV/out/drivers/*/*.ko ./AnyKernel3/modules/system/vendor/lib/modules/
         cd AnyKernel3/
         rm -rf .git .github README.md
         zip -r9 m325fv-kernel.zip *
