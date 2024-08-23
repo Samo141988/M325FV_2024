@@ -25,7 +25,7 @@ jobs:
         mkdir -p toolchain/clang-r383902/
         git clone --depth=1 -b android-10.0.0_r45 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 toolchain/aarch64-linux-android-4.9/
         wget -O clang.tar.gz https://android.googlesource.com/platform//prebuilts/clang/host/linux-x86/+archive/3857008389202edac32d57008bb8c99d2c957f9d/clang-r383902.tar.gz
-        tar -czf clang.tar.gz toolchain/clang-r383902/
+        tar -xvzf clang.tar.gz -C ./toolchain/clang-r383902/
 
     - name: Sync Anykernel3
       run: |
