@@ -47,9 +47,6 @@ jobs:
     - name: Pack AnyKernel3 ZIP
       run: |
         cp -f /home/runner/work/M325FV/M325FV/out/arch/arm64/boot/Image.gz-dtb ./AnyKernel3/
-        cp -f /home/runner/work/M325FV/M325FV/out/net/bridge/br_netfilter.ko ./AnyKernel3/modules/system/vendor/lib/modules/
-        cp -f /home/runner/work/M325FV/M325FV/out/net/ipv4/tcp_htcp.ko ./AnyKernel3/modules/system/vendor/lib/modules/
-        cp -f /home/runner/work/M325FV/M325FV/out/net/ipv4/tcp_westwood.ko ./AnyKernel3/modules/system/vendor/lib/modules/
         cd AnyKernel3/
         rm -rf .git .github README.md
         zip -r9 m325fv-kernel.zip *
