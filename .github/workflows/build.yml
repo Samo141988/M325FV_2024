@@ -26,7 +26,7 @@ jobs:
     - name: Import Kernel SU
       if: ${{ github.event_name == 'workflow_dispatch' && inputs.KSU }}
       run: |
-        cd /home/runner/work/M325FV/M325FV
+        cd /home/runner/work/M325FV_2024/M325FV_2024
         curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
         echo -e "CONFIG_KSU=y" >> arch/arm64/configs/m32_defconfig
         cd KernelSU
@@ -58,7 +58,7 @@ jobs:
 
     - name: Pack AnyKernel3 ZIP
       run: |
-        cp -f /home/runner/work/M325FV/M325FV/out/arch/arm64/boot/Image.gz-dtb ./AnyKernel3/
+        cp -f /home/runner/work/M325FV_2024/M325FV_2024/out/arch/arm64/boot/Image.gz-dtb ./AnyKernel3/
         cd AnyKernel3/
         rm -rf .git .github README.md
         zip -r9 m325fv-kernel.zip *
