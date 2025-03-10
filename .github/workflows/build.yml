@@ -30,7 +30,7 @@ jobs:
         curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
         echo -e "CONFIG_KSU=y" >> arch/arm64/configs/m32_defconfig
         cd KernelSU
-        git revert --no-commit 898e9d4
+        # git revert --no-commit 898e9d4
 
     - name: Sync toolchains
       run: |
