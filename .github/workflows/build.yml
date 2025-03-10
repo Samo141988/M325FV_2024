@@ -30,7 +30,7 @@ jobs:
         curl -LSs "https://raw.githubusercontent.com/Samo141988/KernelSU/next-susfs-5.4/kernel/setup.sh" | bash -s next-susfs-5.4
         echo -e "CONFIG_KSU=y" >> arch/arm64/configs/m32_defconfig
         cd KernelSU
-        # git revert --no-commit 898e9d4
+        git revert --no-commit d8944d6
 
     - name: Sync toolchains
       run: |
