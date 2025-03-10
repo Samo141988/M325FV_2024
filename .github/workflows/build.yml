@@ -47,7 +47,7 @@ jobs:
     - name: Set up build environment
       run: |
         sudo apt update
-        sudo apt install -y build-essential bc gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi libssl-dev libfl-dev curl git ftp lftp wget libarchive-tools ccache python2 python2-dev zip unzip tar gzip bzip2 rar unrar
+        sudo apt install -y build-essential bc gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi libssl-dev libfl-dev curl git ftp lftp wget libarchive-tools ccache python3 python3-dev zip unzip tar gzip bzip2 rar unrar
 
     - name: Build kernel
       run: |
