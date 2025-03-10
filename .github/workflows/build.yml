@@ -42,7 +42,7 @@ jobs:
 
     - name: Sync Anykernel3
       run: |
-        git clone --depth=1 --branch main https://github.com/Samo141988/AnyKernel3_ AnyKernel3
+        git clone --depth=1 --branch master https://github.com/Samo141988/AnyKernel3_ AnyKernel3
 
     - name: Set up build environment
       run: |
